@@ -1,0 +1,200 @@
+/* style.css */
+body {
+    font-family: 'Baloo 2', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff0f5;
+}
+
+header {
+    background-color: #0e1ce9;
+    color: #ffffff;
+    padding: 1em 0;
+}
+
+.coquette-nav {
+    background-color: #ffe4e1;
+    display: flex;  
+    border-radius: 25px;
+    padding: 15px;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.coquette-nav a {
+    color: #091181;
+    text-decoration: none;
+    margin: 15px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.coquette-nav a:hover {
+    color: #281bd6;
+}
+
+main {
+    padding: 2em;
+}
+
+/* Profile Section */
+.profile-image {
+    border: 2px solid rgb(40, 18, 165);
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#profile-overview #greeting {
+    font-family: 'Baloo 2', cursive; /* Menggunakan font 'Pacifico' */
+    font-size: 2em;
+    color: #3419cf;
+    margin-bottom: 0.5em;
+}
+
+#profile-overview .profile-text p {
+    font-family: 'Baloo 2', cursive; /* Menggunakan font 'Dancing Script' */
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #1100ff;
+    color: #ffffff;
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+img { /*img project */
+    border: px solid #3047b0; /* Menambahkan border berwarna pink */
+    padding: 2px; /* Menambahkan ruang di sekitar gambar agar border tidak terlalu dekat dengan gambar */
+    border-radius: 50px; /* Membuat sudut border melengkung (opsional) */
+}
+
+.gallery-page p {
+    color: #131f88; /* Warna teks khusus */
+    font-size: 16px; /* Ukuran teks */
+    text-align: justify; /* Rata kanan dan kiri */
+    line-height: 2; /* Spasi antar baris */
+    text-align: justify; /* Rata kanan dan kiri */
+}
+
+.download-btn { /* Button pdf halaman home */
+    display: inline-block;         /* Membuat seperti tombol */
+    padding: 10px 20px;           /* Memberikan ruang di dalam tombol */
+    margin: 5px;                 /* Jarak antar tombol */
+    font-size: 16px;              /* Ukuran teks */
+    text-decoration: none;        /* Menghilangkan garis bawah */
+    color: white;                 /* Warna teks */
+    background-color: #030fb8;    /* Warna latar tombol */
+    border-radius: 5px;           /* Membulatkan sudut tombol */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Bayangan tombol */
+    cursor: pointer;    
+}
+
+.download-btn:hover {
+    background-color: #0c00b9;     /* Warna tombol saat hover */
+}
+
+.button-container { /* Button contact */
+    text-align: center; /* Menyelaraskan teks di dalam container */
+}
+
+.button-div { /* Button contact */
+    display: inline-block;         /* Membuat seperti tombol */
+    padding: 10px 20px;           /* Memberikan ruang di dalam tombol */
+    margin: 5px;                 /* Jarak antar tombol */
+    font-size: 16px;              /* Ukuran teks */
+    text-decoration: none;        /* Menghilangkan garis bawah */
+    color: white;                 /* Warna teks */
+    background-color: #1100ac;    /* Warna latar tombol */
+    border-radius: 5px;           /* Membulatkan sudut tombol */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Bayangan tombol */
+    cursor: pointer;              /* Mengubah kursor menjadi tangan */
+}
+
+.button-div:hover {
+    background-color: #0f00e4;    /* Warna tombol saat hover */
+}
+
+/* Animasi kelap-kelip */
+#blinking-greeting{
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+    font-size: 2em; /* Ukuran font besar */
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+.border-pink {
+    border: 4px solid #ffffff;
+    padding: 10px;
+}
+.text-pink {
+    color: #ffffff;
+
+}
+
+/* About */
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-table th,
+.info-table td {
+    border: 1px solid #ffffff;
+    padding: 10px;
+    text-align: left;
+}
+
+.info-table th {
+    background-color: pink;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.info-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.info-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Animasi Warna untuk Header */
+@keyframes color-change {
+    0% {
+        background-color: #2100da; /* Warna pertama */
+    }
+    33% {
+        background-color: #4839d1; /* Warna kedua */
+    }
+    66% {
+        background-color: #6854c0; /* Warna ketiga */
+    }
+    100% {
+        background-color: #22185e; /* Kembali ke warna pertama */
+    }
+}
+
+/* Terapkan animasi ke header atas dan bawah */
+header, footer {
+    animation: color-change 5s infinite; /* Durasi animasi 5 detik */
+    color: white; /* Teks tetap putih */
+    padding: 10px 0;
+    text-align: center;
+}

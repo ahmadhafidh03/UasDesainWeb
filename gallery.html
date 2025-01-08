@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="text-center py-4">
+        <h1>My Gallery</h1>
+        <p id="greeting"></p> <!-- Elemen untuk greeting -->
+        <nav class="coquette-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">Profile</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="gallery-page container">
+        <section class="mt-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="project1.jpg" alt="Project 1" class="img-fluid">
+                    <p>The project is an interactive learning platform called “Getting to Know Animals,” designed for children. 
+                    Featuring nature-themed visuals and simple navigation buttons, the platform helps children learn about different animals in a fun and educational way.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="project2.jpg" alt="Project 2" class="img-fluid">
+                    <p>Make a straight cable and test it using a LAN tester. After both ends of the RJ45 cable are connected, use a LAN tester to test the LAN. 
+                    Put both ends of the cable on the tester and observe the lights. If lights 1-8 light up properly with the same flashing order, then the cable is working properly. 
+                    However, if one of the lights is off or the flashing order is not the same, then the RJ45 installation will be wrong.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="project3.PNG" alt="Project 3" class="img-fluid">
+                    <p>This project is a Java program that calculates the area of ​​a rectangle with the length and width inputted by the user. 
+                    This program uses the Scanner class to take input from the user and the Locale class to set the input format. This program also uses the System.out class to display the output to the screen. 
+                    This image shows the NetBeans IDE displaying the program code and the output of the program. On the left are the project folders, on the right is the code editor, and at the bottom is the output of the program.</p>
+                </div>
+            </div>
+            <div class="button-container">
+                <!-- Tombol Submit -->
+                <a href="about.html" class="button-div">Back</a>
+                <!-- Tombol Kembali -->
+                <a href="contact.html" class="button-div">Next</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-3">
+        <p>Ahmad Hafidh Amrullah PMM2401058 Project UAS Desain Web</p>
+    </footer>
+
+    <script>
+        // Ambil waktu saat ini
+        const date = new Date();
+        const hours = date.getHours();
+    
+        // Greeting berdasarkan jam
+        const greeting = hours < 12
+        ? "Good Morning🌤️"
+        : hours < 15
+        ? "Good Afternoon☀️"
+        : hours < 18
+        ? "Good Evening🌥️"
+        : "Good Night🌙";
+
+        const header = document.querySelector("header");
+        const greetingElement = document.createElement("p");
+        greetingElement.id = "blinking-greeting";
+        greetingElement.textContent = greeting;
+        const titleElement = header.querySelector("h1");
+        titleElement.insertAdjacentElement("afterend", greetingElement);
+    </script>
+</body>
+</html>

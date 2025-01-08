@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="text-center py-4">
+        <h1>My Profile</h1>
+        <p id="greeting"></p> <!-- Elemen untuk greeting -->
+        <nav class="coquette-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">Profile</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Tabel Informasi Diri -->
+        <section>
+            <h2>Personal Information</h2>
+            <table class="info-table">
+                <tr>
+                    <th>Name</th>
+                    <td>Ahmad Hafidh Amrullah</td>
+                </tr>
+                <tr>
+                    <th>TTL
+                    <td>Magetan, 30 April 2003</td>
+                </tr>
+                <tr>
+                    <th>Hobby</th>
+                    <td>Running, cycling, and hiking</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>ahmadhafidh64@gmail.com</td>
+                </tr>
+                <tr>
+                    <th>Telp</th>
+                    <td>085607071950</td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td>RT 6/RW 4 Mandiro, Ds. Mojopurno, Kec. Ngariboyo, Kab. Magetan, Prov. Jawa Timur</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Tabel Pendidikan -->
+        <section>
+            <h2>Education</h2>
+            <table class="info-table">
+                <tr>
+                    <th>Education</th>
+                    <th>Year</th>
+                </tr>
+                <tr>
+                    <td>SMA Negeri 2 Magetan (MIPA)</td>
+                    <td>2019-2022</td>
+                </tr>
+                <tr>
+                    <td>Universitas PGRI Madiun (Computer Engineering)</td>
+                    <td>2023 until now</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Tabel Pengalaman Kerja -->
+        <section>
+            <h2>Internship Experience</h2>
+            <table class="info-table">
+                <tr>
+                    <th>Internship Section</th>
+                    <th>Task</th>
+                </tr>
+                <tr>
+                    <td>Become a package stevedore (September 2023)</td>
+                    <td>Unloading the cargo containing the packages to be sent to the destination address.</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Tabel Keterampilan -->
+        <section>
+            <h2>Skills</h2>
+            <table class="info-table">
+                <tr>
+                    <th>Hard Skill</th>
+                    <th>Soft Skill</th>
+                </tr>
+                <tr>
+                    <td>Laravel</td>
+                    <td>Team Collaboration</td>
+                </tr>
+                <tr>
+                    <td>PHP</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr>
+                    <td>Java</td>
+                    <td>Creative</td>
+                </tr>
+                <tr>
+                    <td>My SQL</td>
+                    <td>Honest</td>
+                </tr>
+                <tr>
+                    <td>Microsoft Office</td>
+                    <td>Responsible</td>
+                </tr>
+            </table>
+            <div class="button-container">
+                <!-- Tombol Submit -->
+                <a href="index.html" class="button-div">Back</a>
+                <!-- Tombol Kembali -->
+                <a href="gallery.html" class="button-div">Next</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-3">
+        <p>Ahmad Hafidh Amrullah PMM2401058 Project UAS Desain Web</p>
+    </footer>
+
+    <script>
+        // Ambil waktu saat ini
+        const date = new Date();
+        const hours = date.getHours();
+    
+        // Greeting berdasarkan jam
+        const greeting = hours < 12
+        ? "Good Morning🌤️"
+        : hours < 15
+        ? "Good Afternoon☀️"
+        : hours < 18
+        ? "Good Evening🌥️"
+        : "Good Night🌙";
+
+        const header = document.querySelector("header");
+        const greetingElement = document.createElement("p");
+        greetingElement.id = "blinking-greeting";
+        greetingElement.textContent = greeting;
+        const titleElement = header.querySelector("h1");
+        titleElement.insertAdjacentElement("afterend", greetingElement);
+    </script>
+</body>
+</html>
